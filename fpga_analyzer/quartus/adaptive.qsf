@@ -1,0 +1,352 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2025  Altera Corporation. All rights reserved.
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, the Altera Quartus Prime License Agreement,
+# the Altera IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Altera and sold by Altera or its authorized distributors.  Please
+# refer to the Altera Software License Subscription Agreements 
+# on the Quartus Prime software download page.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+# Date created = 04:15:01  February 28, 2026
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		adaptive_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Intel recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CEBA9F31C7
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 25.1STD.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "04:15:01  FEBRUARY 28, 2026"
+set_global_assignment -name LAST_QUARTUS_VERSION "25.1std.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name EDA_SIMULATION_TOOL "Questa Altera FPGA (Verilog)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_timing
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name FITTER_EFFORT "FAST FIT"
+set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS ON
+set_global_assignment -name SMART_RECOMPILE ON
+set_global_assignment -name SOURCE_FILE main.c
+set_global_assignment -name SOURCE_FILE niosvfifo.sopcinfo
+set_global_assignment -name SDC_FILE timing.sdc
+set_global_assignment -name QIP_FILE niosvfifo/synthesis/niosvfifo.qip
+set_global_assignment -name VERILOG_FILE resource_manager.v
+set_global_assignment -name VERILOG_FILE accelerator.v
+set_global_assignment -name VERILOG_FILE adaptive.v
+set_global_assignment -name QIP_FILE my_fifo.qip
+set_global_assignment -name VERILOG_FILE tb_adaptive.v
+set_global_assignment -name VERILOG_FILE niosv_stub.v
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_WEAK_PULLUP "AS INPUT TRI-STATED"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_global_assignment -name FORCE_CONFIGURATION_VCCIO ON
+set_global_assignment -name TOP_LEVEL_ENTITY adaptive
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE FASTEST
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name ENABLE_CONFIGURATION_PINS OFF
+set_global_assignment -name ENABLE_BOOT_SEL_PIN OFF
+set_global_assignment -name STRATIXV_CONFIGURATION_SCHEME "PASSIVE SERIAL"
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN ON
+set_global_assignment -name ACTIVE_SERIAL_CLOCK FREQ_100MHZ
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[64]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[65]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[66]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[67]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[68]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[69]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[70]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[71]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[72]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[73]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[74]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[75]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[76]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[77]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[78]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[79]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[80]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[81]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[82]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[83]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[84]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[85]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[86]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[87]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[88]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[89]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[90]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[91]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[92]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[93]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[94]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[95]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[96]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[97]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[98]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[99]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[100]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[101]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[102]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[103]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[104]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[105]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[106]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[107]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[108]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[109]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[110]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[111]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[112]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[113]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[114]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[115]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[116]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[117]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[118]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[119]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[120]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[121]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[122]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[123]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[124]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[125]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[126]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[127]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[13]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[14]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[15]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[16]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[17]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[18]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[19]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[20]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[21]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[22]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[23]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[24]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[25]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[26]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[27]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[28]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[29]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[30]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[31]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[32]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[33]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[34]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[35]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[36]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[37]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[38]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[39]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[40]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[41]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[42]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[43]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[44]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[45]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[46]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[47]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[48]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[49]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[50]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[51]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[52]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[53]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[54]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[55]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[56]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[57]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[58]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[59]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[60]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[61]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[62]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[63]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[64]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[65]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[66]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[67]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[68]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[69]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[70]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[71]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[72]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[73]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[74]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[75]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[76]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[77]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[78]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[79]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[80]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[81]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[82]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[83]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[84]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[85]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[86]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[87]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[88]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[89]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[90]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[91]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[92]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[93]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[94]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[95]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[96]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[97]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[98]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[99]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[100]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[101]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[102]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[103]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[104]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[105]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[106]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[107]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[108]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[109]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[110]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[111]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[112]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[113]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[114]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[115]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[116]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[117]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[118]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[119]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[120]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[121]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[122]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[123]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[124]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[125]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[126]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_bus[127]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out_valid
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to alert_led
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_valid
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to reset_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[13]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[14]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[15]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[32]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[33]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[34]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[35]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[36]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[37]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[38]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[39]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[40]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[41]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[42]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[43]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[44]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[45]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[46]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[47]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[48]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[16]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[49]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[17]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[50]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[18]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[51]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[19]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[52]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[20]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[53]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[21]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[54]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[22]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[55]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[23]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[56]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[24]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[57]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[25]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[58]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[26]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[59]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[27]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[60]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[28]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[61]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[29]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[62]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[30]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[63]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in_bus[31]
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
